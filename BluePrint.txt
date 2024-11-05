@@ -1,0 +1,30 @@
+Commands:
+add
+update
+delete
+Quit
+list
+done_list
+not_done_list
+progress_list
+
+Task Properties:
+id
+description
+status
+createdAt
+updatedAt
+
+task state:
+not done
+in progress
+done
+
+Format: 
+add "Buy groceries"
+update 1
+
+Upgrades:
+Error Logs
+User Login System
+Settings

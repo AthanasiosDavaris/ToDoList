@@ -1,0 +1,6 @@
+5/11/12:
+
+-Started the project because i needed a break from learning
+-Wrote the blueprint for how im gonna make the cli
+-Created the try-except file opener
+-Created the start of the app and spliting of the string
