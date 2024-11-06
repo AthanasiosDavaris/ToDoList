@@ -34,4 +34,18 @@ while True:
 
   # Checks the command type
   if command_split[0] == "add":
-    pass
+    print("add")
+  elif command_split[0] == "update":
+    print("update")
+  elif command_split[0] == "delete":
+    print("delete")
+  elif command_split[0] == "quit":
+    print("quit")
+  elif command_split[0] == "list":
+    print("list")
+  elif command_split[0] == "done_list":
+    print("done_list")
+  elif command_split[0] == "not_done_list":
+    print("not_done_list")
+  elif command_split[0] == "progress_list":
+    print("progress_list")
