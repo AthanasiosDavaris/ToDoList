@@ -2,11 +2,20 @@ import json
 from pathlib import Path
 from platform import uname
 
+#function that checks if task exists
+def string_in_file(filename, string):
+  for line in filename:
+    if string in line:
+      return True
+  else:
+    return False
+
 # opens file and checks for errors
 try:
   tasks = open("Tasks.json", "a+")
 except:
   print("An unexpected error occured.")
+  exit()
   # following code is in development
   """
   error ={
@@ -26,63 +35,58 @@ while True:
   command = input("What do you want ToDo? ").lower()
 
   # Splits the command prompt
-  command_split = command.split()
-  if not command_split:
+  splited_command = command.split()
+  if not splited_command:
     print("You just gave an empty command (not cool XXX)")
     continue
-  for word in command_split:
-    print(word)
 
   # Checks the command type
-  if command_split[0] == "add":
-    print("add")
+  if splited_command[0] == "add":
+    if string_in_file:
+      print("Task already exists!")
+      continue
     try:
-      print("sheeesh")
-      command_split.remove("add")
-      tasks.write(s.replace('"', '') for s in command_split)
-      for word in command_split:
+      splited_command.remove("add")
+      tasks.write(''.join(s.replace('"', '') for s in splited_command))
+      tasks.write(" 1")
+      for word in splited_command:
         print(word)
     except:
-      print("damn")
-  elif command_split[0] == "update":
+      print("The input format is wrong!")
+  elif splited_command[0] == "update":
     print("update")
     try:
       pass
     except:
       pass
-  elif command_split[0] == "delete":
+  elif splited_command[0] == "delete":
     print("delete")
     try:
       pass
     except:
       pass
-  elif command_split[0] == "quit":
-    print("quit")
+  elif splited_command[0] == "quit":
     tasks.close()
-    exit()
-    try:
-      pass
-    except:
-      pass
-  elif command_split[0] == "list":
+    break
+  elif splited_command[0] == "list":
     print("list")
     try:
       pass
     except:
       pass
-  elif command_split[0] == "done_list":
+  elif splited_command[0] == "done_list":
     print("done_list")
     try:
       pass
     except:
       pass
-  elif command_split[0] == "not_done_list":
+  elif splited_command[0] == "not_done_list":
     print("not_done_list")
     try:
       pass
     except:
       pass
-  elif command_split[0] == "progress_list":
+  elif splited_command[0] == "progress_list":
     print("progress_list")
     try:
       pass
