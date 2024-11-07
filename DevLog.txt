@@ -1,6 +1,11 @@
-5/11/12:
+5/11/24:
 
 -Started the project because i needed a break from learning
 -Wrote the blueprint for how im gonna make the cli
 -Created the try-except file opener
 -Created the start of the app and spliting of the string
+
+7/11/24
+
+-Created a string_in_file function that checks if a string exists in a file
+-Finished the "add" function

@@ -42,6 +42,7 @@ while True:
 
   # Checks the command type
   if splited_command[0] == "add":
+    # Checks if the task exists
     if string_in_file:
       print("Task already exists!")
       continue
