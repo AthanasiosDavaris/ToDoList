@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 from platform import uname
 
-# test
+# test 1
 # opens file and checks for errors
 try:
   tasks = open("Tasks.json", "a+")
