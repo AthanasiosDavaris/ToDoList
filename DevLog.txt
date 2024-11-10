@@ -9,3 +9,7 @@
 
 -Created a string_in_file function that checks if a string exists in a file
 -Finished the "add" function
+
+10/11/24
+
+-Wrote the "upgrade" function (not debugged)

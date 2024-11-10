@@ -22,7 +22,7 @@ done
 
 Format: 
 add "Buy groceries"
-update 1
+update "Buy groceries"
 
 Upgrades:
 Error Logs

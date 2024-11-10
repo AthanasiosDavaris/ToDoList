@@ -49,17 +49,23 @@ while True:
     try:
       splited_command.remove("add")
       tasks.write(''.join(s.replace('"', '') for s in splited_command))
-      tasks.write(" 1")
+      tasks.write(" False")
       for word in splited_command:
         print(word)
     except:
       print("The input format is wrong!")
   elif splited_command[0] == "update":
-    print("update")
-    try:
-      pass
-    except:
-      pass
+    # Checks if the task exists
+    if not string_in_file:
+      print("Task already exists!")
+      continue
+
+    # updates the task state
+    splited_command.remove("update")
+    taskname = ''.join(s.replace('"', '') for s in splited_command)
+    filedata = tasks.read()
+    filedata = filedata.replace(taskname + " False", taskname + " True")
+    tasks.write(filedata)
   elif splited_command[0] == "delete":
     print("delete")
     try:
