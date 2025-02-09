@@ -4,11 +4,19 @@ from platform import uname
 
 #function that checks if task exists
 def string_in_file(filename, string):
+  print("3")
   for line in filename:
+    print (line)
+    print(filename)
+    print("1")
     if string in line:
+      print(string)
+      print(line)
+      print("2")
       return True
-  else:
-    return False
+  
+  print("4")
+  return False
 
 # opens file and checks for errors
 try:
@@ -43,11 +51,13 @@ while True:
   # Checks the command type
   if splited_command[0] == "add":
     # Checks if the task exists
-    if string_in_file:
+    print(string_in_file(tasks, splited_command))
+    if string_in_file(tasks, splited_command):
       print("Task already exists!")
       continue
     try:
       splited_command.remove("add")
+      tasks.write(" ")
       tasks.write(''.join(s.replace('"', '') for s in splited_command))
       tasks.write(" False")
       for word in splited_command:
